@@ -30,7 +30,24 @@ module.exports = {
   */
   modules: [
     '@nuxtjs/pwa',
+    '@nuxtjs/sitemap',
+    [
+      '@nuxtjs/yandex-metrika',
+      {
+        id: '48043325',
+        webvisor: true,
+        clickmap: true,
+        useCDN: true,
+        trackLinks: true,
+        accurateTrackBounce: true
+      }
+    ]
   ],
+  sitemap: {
+    path: '/sitemap.xml',
+    cacheTime: 1000 * 60 * 15,
+    generate: true
+  },
   manifest: {
     name: 'Sainte Scène',
     lang: 'fr'

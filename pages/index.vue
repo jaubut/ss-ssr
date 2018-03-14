@@ -36,7 +36,7 @@ export default {
   name: 'Index',
   components: {
     BlocMission,
-    BlocMessage,
+    BlocMessage
   },
   asyncData ({ env, params }) {
     return Promise.all([
