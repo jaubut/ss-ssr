@@ -51,7 +51,7 @@ export default {
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
-  background-image: url(../assets/laureetsam-2.jpg);
+  background-image: url(../assets/laureetsam-2.png);
 }
 #blocMission .signature {
   font-family: "Germania One", sans-serif;

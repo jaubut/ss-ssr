@@ -1,11 +1,10 @@
 <template>
   <transition name="fade">
     <iframe
-    class="video-iframe"
+      class="video-iframe"
       :src="message.fields.urlYoutube"
       frameborder="0"
-      allow="autoplay;
-      encrypted-media"
+      allow="autoplay"
       allowfullscreen>
     </iframe>
   </transition>
@@ -13,20 +12,7 @@
 <script>
 export default {
   name: 'blocMessage',
-  props: ['message'],
-  data () {
-    return {
-      iframeVideo: false
-    }
-  },
-  methods: {
-    closeHover () {
-      this.iframeVideo = false
-    },
-    openIframe () {
-      this.iframeVideo = true
-    }
-  }
+  props: ['message']
 }
 </script>
 <style scoped>
