@@ -21,7 +21,7 @@
       </template>
     </div>
     <div class="photo-section">
-      <div v-for="photo in photos.slice(0, 24)" :key="photo.fields.title" class="photo" :style="{ 'background-image': 'url(' + photo.fields.file.url + '?w=500&h=500)' }"></div>
+      <div v-for="photo in photos.slice(0, 24)" :key="photo.fields.title"><img v-img:group :src="photo.fields.file.url + '?w=500&h=500'" class="photo"></div>
     </div>
   </div>
 </template>
@@ -113,28 +113,18 @@ export default {
   font-size: 3rem;
 }
 .photo {
-  display: flex;
-  flex-flow: column wrap;
-  justify-content: flex-end;
-  min-height: 250px;
-  background-position: center center;
-  background-size: cover;
-  background-repeat: no-repeat;
+  width: auto; 
+  height: 100%; 
 }
 .photo-section {
-  width: 100%;
-  display: grid;
-  grid-template: 1fr/1fr;
-  grid-gap: 5px;
-  justify-content: center;
+  display: flex;
+  flex-flow: row wrap;
+  padding: .5vw;
   text-align: center;
-  margin: 1% 0;
 }
-
-@media(min-width:468px) {
-  .photo-section {
-    grid-template: 45% 25% 25%/repeat(auto-fill, 23%);
-  }
+.photo-section div { 
+  flex: auto; 
+  height: 200px; 
+  margin: .5vw; 
 }
-
 </style>
