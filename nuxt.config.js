@@ -24,17 +24,30 @@ module.exports = {
   /*
   ** Customize the progress bar color
   */
-  loading: { color: '#3B8070' },
+  loading: {
+    color: '#A50E2F',
+    height: '5px'
+  },
   /*
   ** Build configuration
   */
   modules: [
-    '@nuxtjs/pwa', 
-    '@nuxtjs/sitemap'
+    '@nuxtjs/pwa',
+    '@nuxtjs/sitemap',
+    [
+      '@nuxtjs/yandex-metrika',
+      {
+        id: '48043325',
+        webvisor: true,
+        clickmap: true,
+        useCDN: true,
+        trackLinks: true,
+        accurateTrackBounce: true
+      }
+    ]
   ],
   sitemap: {
     path: '/sitemap.xml',
-    hostname: 'https://saintescene.com',
     cacheTime: 1000 * 60 * 15,
     generate: true
   },
@@ -58,5 +71,5 @@ module.exports = {
       }
     }
   },
-  plugins: ['~/plugins/vueclickoutside.js', '~/plugins/contentful.js', '~/plugins/component-hero.js']
+  plugins: ['~/plugins/vueclickoutside.js', '~/plugins/contentful.js', '~/plugins/component-hero.js', '~/plugins/v-img.js']
 }

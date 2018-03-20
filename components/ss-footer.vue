@@ -20,7 +20,7 @@
         <a href="tel:4503611838"><p>450-361-1838</p></a>
         <a href="mailto:allo@saintescene.com"><p>allo@saintescene.com</p></a>
       </div>
-      <router-link :to="{ name: 'Evenement' }">
+      <router-link to="evenements">
         <div class="text">
           <h3>Prochains Événements</h3>
           <p v-if="currentDate >= 5">Réunion Dimanche <span class="info">10h - 12h</span> </p>

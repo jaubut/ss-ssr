@@ -1,17 +1,13 @@
 <template>
   <div id="photo-api" :class="SectionPhoto">
-    <div :class="IndexPhoto" v-for="photo in photos" :key="photo.id" :style="{ 'background-image': 'url(http://saintescene.imgix.net/' + photo.url + '.jpg)' }"></div>
+    <div v-for="photo in photos" :key="photo.fields.title" :class="IndexPhoto" :style="{ 'background-image': 'url(' + photo.fields.file.url + ')' }"></div>
   </div>
 </template>
 <script>
-import { mapMutations } from 'vuex'
 
 export default {
   name: 'photo-api',
-  props: ['IndexPhoto', 'SectionPhoto'],
-  computed: { 
-    photos () { return this.$store.state.photos.photos }
-  }
+  props: ['IndexPhoto', 'SectionPhoto', 'photo']
 }
 </script>
 <style scoped>

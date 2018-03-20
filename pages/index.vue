@@ -1,7 +1,7 @@
 <template>
   <div id="Index">
     <div class="video">
-      <video autoplay muted poster="~/assets/logo-stripe.svg">
+      <video autoplay muted>
         <source src="~/assets/videohd.webm" type="video/webm">
         <source src="~/assets/videohd.mp4" type="video/mp4">
         <h1>Sainte Scène</h1>
@@ -13,19 +13,22 @@
     ></BlocMission>
     <div class="tag">
       <h3>Messages</h3>
-      <p>Voir tous <router-link :to="{ name: 'Messages' }"><span class="link">les messages</span></router-link></p>
+      <p>Voir tous <router-link to="/messages"><span class="link">les messages</span></router-link></p>
     </div>
     <div class="message-section">
       <template v-for="message in messages.slice(0, 2)">
         <BlocMessage :message="message" :key="message.fields.urlYoutube"></BlocMessage>
       </template>
     </div>
-    <PhotoApi SectionPhoto="photo-section" IndexPhoto="photo"></PhotoApi>
+    <div class="photo-section">
+      <div v-for="photo in photos.slice(0, 24)" :key="photo.fields.title">
+        <img v-img:group :src="photo.fields.file.url + '?w=500&h=500'" class="photo">
+      </div>
+    </div>
   </div>
 </template>
 <script>
 import {createClient} from '@/plugins/contentful'
-import PhotoApi from '@/components/ss-photo'
 import BlocMission from '@/components/ss-bloc-mission'
 import BlocMessage from '@/components/ss-bloc-message'
 
@@ -34,20 +37,24 @@ const client = createClient()
 export default {
   name: 'Index',
   components: {
-    PhotoApi,
     BlocMission,
-    BlocMessage,
+    BlocMessage
   },
   asyncData ({ env, params }) {
-    return client.getEntries({
-      'content_type': 'message',
+    return Promise.all([
+      client.getEntries({
+        'content_type': 'message',
         order: '-sys.createdAt'
-    }).then(entries => {
+      }),
+      client.getAssets({
+        order: '-sys.createdAt'
+      })
+    ]).then(([entries, response]) => {
       return {
-        messages: entries.items
+        messages: entries.items,
+        photos: response.items
       }
-    })
-    .catch(console.error)
+    }).catch(console.error)
   }
 }
 </script>
@@ -107,20 +114,19 @@ export default {
   font-weight: 400;
   font-size: 3rem;
 }
-
+.photo {
+  width: auto; 
+  height: 100%; 
+}
 .photo-section {
-  width: 100%;
-  display: grid;
-  grid-template: 1fr 1fr/1fr 1fr;
-  grid-gap: 5px;
-  justify-content: space-around;
-  margin: 1% 0;
+  display: flex;
+  flex-flow: row wrap;
+  padding: .5vw;
+  text-align: center;
 }
-
-@media(min-width:468px) {
-  .photo-section {
-    grid-template: 45% 25% 25%/repeat(auto-fill, 23%);
-  }
+.photo-section div { 
+  flex: auto; 
+  height: 200px; 
+  margin: .5vw; 
 }
-
 </style>
