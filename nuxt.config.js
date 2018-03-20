@@ -29,8 +29,15 @@ module.exports = {
   ** Build configuration
   */
   modules: [
-    '@nuxtjs/pwa',
+    '@nuxtjs/pwa', 
+    '@nuxtjs/sitemap'
   ],
+  sitemap: {
+    path: '/sitemap.xml',
+    hostname: 'https://saintescene.com',
+    cacheTime: 1000 * 60 * 15,
+    generate: true
+  },
   manifest: {
     name: 'Sainte Scène',
     lang: 'fr'
