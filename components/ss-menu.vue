@@ -4,6 +4,7 @@
     <router-link to="/evenements">Événements</router-link>
     <router-link to="/impliquetoi">Implique-toi</router-link>
     <router-link to="/messages">Messages</router-link>
+    <router-link to="/donner">Donner</router-link>
   </div>
 </template>
 <script>

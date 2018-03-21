@@ -21,8 +21,8 @@
       </template>
     </div>
     <div class="photo-section">
-      <div v-for="photo in photos.slice(0, 24)" :key="photo.fields.title">
-        <img v-img:group :src="photo.fields.file.url + '?w=500&h=500'" class="photo">
+      <div v-for="photo in photos.slice(0, 30)" :key="photo.fields.title">
+        <img v-img:group :src="photo.fields.file.url + '?w=800&h=800'" class="photo">
       </div>
     </div>
   </div>
@@ -126,7 +126,7 @@ export default {
 }
 .photo-section div { 
   flex: auto; 
-  height: 200px; 
+  height: 30vh; 
   margin: .5vw; 
 }
 </style>

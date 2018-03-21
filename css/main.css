@@ -65,7 +65,7 @@ html, body {
     color: black;
   }
   .active, body .active {
-    transform: translateY(300px);
+    transform: translateY(350px);
   }
   .container, body .container {
     display: flex;
