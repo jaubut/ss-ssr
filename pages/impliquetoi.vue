@@ -8,7 +8,7 @@
       </div>
     </div>
     <div class="bloc span-2 row">
-      <form name="contact" method="POST" netlify>
+      <form name="contact" method="POST" data-netlify="true">
         <p>
           <label>Your Name: <input type="text" name="name"></label>   
         </p>
