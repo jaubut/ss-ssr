@@ -7,6 +7,22 @@
         <p>C'est super simple. Ici à la <strong>Sainte Scène</strong> on aime travailler en équipe et on croit que faire partie de la communauté passe par notre implication. Voici les départements où vous pouvez vous impliquer: musique, régie, multi-média, Sainte Scène Junior (éducation chrétienne), ect.</p>
       </div>
     </div>
+    <div class="bloc span-2 row">
+      <form name="contact" method="POST" netlify>
+        <p>
+          <label>Your Name: <input type="text" name="name"></label>   
+        </p>
+        <p>
+          <label>Your Email: <input type="email" name="email"></label>
+        </p>
+        <p>
+          <label>Message: <textarea name="message"></textarea></label>
+        </p>
+        <p>
+          <button type="submit">Send</button>
+        </p>
+      </form>
+    </div>
     <div class="bloc span-2 grey row">
       <div class="texte">
         <img src="../assets/Slack_Mark.svg" alt="">
