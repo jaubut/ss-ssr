@@ -21,7 +21,7 @@ export default {
 }
 
 .hero-don {
-  background-image: url(~/assets/don.jpg);
+  background-image: url(~/assets/donner.jpg);
   background-position: center !important;
 }
 </style>
