@@ -9,18 +9,10 @@
     </div>
     <div class="bloc span-2 row">
       <form name="contact" method="POST" data-netlify="true" data-netlify-honeypot="bot-field">
-        <p>
-          <label>Your Name: <input type="text" name="name"></label>   
-        </p>
-        <p>
-          <label>Your Email: <input type="email" name="email"></label>
-        </p>
-        <p>
-          <label>Message: <textarea name="message"></textarea></label>
-        </p>
-        <p>
-          <button type="submit">Send</button>
-        </p>
+        <input type="text" name="name" input="name">  
+        <input type="email" name="email" input="email">
+        <textarea name="message"></textarea>
+        <button class="submit button-slack" type="submit">Send</button>
       </form>
     </div>
     <div class="bloc span-2 grey row">
@@ -55,11 +47,28 @@ export default {
 }
 </script>
 <style scoped>
-  #implique {
+#implique {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-auto-rows: calc(100vh/1.7);
   width: 100%;
+}
+form {
+  display: grid;
+  grid-template: 1fr 100px 1fr / 1fr 1fr;
+}
+input {
+  border: 2px solid grey;
+  border-radius: 5px;
+  background: transparent;
+  height: auto;
+  width: auto;
+}
+textarea {
+  grid-area: 2/1/3/3;
+}
+.submit {
+  grid-area: 3/1/4/3;
 }
 .texte {
   padding: 5%;
