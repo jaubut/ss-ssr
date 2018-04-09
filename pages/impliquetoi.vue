@@ -4,22 +4,14 @@
     <div class="bloc span-2">
       <div class="texte">
         <h2>Fais partie des coulisses de Sainte Scène</h2>
-        <p>C'est super simple. Ici à la <strong>Sainte Scène</strong> on aime travailler en équipe et on croit que faire partie de la communauté passe par notre implication. Voici les départements où vous pouvez vous impliquer: musique, régie, multi-média, Sainte Scène Junior (éducation chrétienne), ect.</p>
+        <p>C'est super simple. Ici à la <strong>Sainte Scène</strong> on aime travailler en équipe et on croit que faire partie de la communauté passe par notre implication. Voici les départements où vous pouvez vous impliquer: musique, régie, multi-média, <br> Sainte Scène Junior (éducation chrétienne), ect.</p>
       </div>
-    </div>
-    <div class="bloc span-2 row">
-      <form name="contact" method="POST" data-netlify="true" data-netlify-honeypot="bot-field">
-        <input type="text" name="name" input="name">  
-        <input type="email" name="email" input="email">
-        <textarea name="message"></textarea>
-        <button class="submit button-slack" type="submit">Send</button>
-      </form>
     </div>
     <div class="bloc span-2 grey row">
       <div class="texte">
         <img src="../assets/Slack_Mark.svg" alt="">
         <h3>On aime Slack</h3>
-        <p>Slack est une application formidable qui représente un hub central pour toute l'équipe de <strong>Sainte Scène</strong></p>
+        <p>Slack est une application formidable qui représente un point central pour toute l'équipe de <strong>Sainte Scène</strong>.</p>
       </div>
       <img src="../assets/slack/photo-1.png" alt="">
     </div>
@@ -27,7 +19,7 @@
       <div class="texte">
         <img src="../assets/Slack_Mark.svg" alt="">
         <h3>Sur ton téléphone ou ordi</h3>
-        <p>Slack est une plateforme disponible sur tous tes appareils</p>
+        <p>Slack est une plateforme disponible <br>sur tous tes appareils</p>
       </div>
       <img src="../assets/slack/photo-7.png" alt="">
     </div>
@@ -35,7 +27,7 @@
       <a href="https://l.messenger.com/l.php?u=https%3A%2F%2Fjoin.slack.com%2Ft%2Fsaintescene%2Fshared_invite%2FenQtMjk4Njc2MjUyNDM2LTM1YjYwMDdmNTE0NTg2OWMwZjljMjYxZWZkNjYyM2E5NzE5NTRlNDYxN2RhYTYyZjc1ODM3ZGYxMmEzZGRmZDc&h=ATNrppBQA1rfv7gKNDJ29JC8oD8EgbpAdc---wRHwQoezDspNt5SSUUe5v1lybhUhBAUkF4tCZGLCHr2rlMq-E1Os0_VkjBYM4-raKDyOblvVajGxR0K8lb_XgRR_0ULZuf51Bja2FeCKhAW" target="_blank">
         <div class="button-slack">
           <img src="../assets/Slack_Mark.svg" alt="">
-          <p>Ajoute-toi au slak</p>
+          <p>Ajoute-toi au slack</p>
         </div>
       </a>
     </div>
@@ -184,7 +176,7 @@ img {
   border-radius: 5px;
   background: transparent;
   height: auto;
-  width: auto;
+  min-width: 100%;
   cursor: pointer;
   padding: 2% 5%;
   transition: all ease-in-out 0.5s;

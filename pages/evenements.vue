@@ -9,7 +9,7 @@
       <div class="text-group">
         <h2>Dimanche</h2>
         <span>10h - 12h</span>
-        <p>Notre communauté Sainte Scène a son rassemblement principal à Granby, le dimanche matin à 10h au 1236 rue St-Charles S.<br/> Vous y trouverez une expérience musicale avec louange, une équipe pastorale et des leaders qui partageront de tout cœur, le cœur de Dieu pour vous aider à grandir:  âme, corps, et esprit.  Ce n’est pas un spectacle, c’est une <strong>Sainte Scène</strong> pour toutes les générations, les familles, les célibataires, les ados et les enfants. Tous sont bienvenus ! Nous sommes en communion tous les dimanches à 10h.  Fais partie de la <strong>Sainte Scène</strong>.</p>
+        <p>Notre communauté Sainte Scène a son rassemblement principal à Granby, le dimanche matin à 10h au 1236 rue St-Charles S.<br/> Vous y trouverez une expérience musicale avec louange, une équipe pastorale et des leaders qui partageront de tout cœur, le cœur de Dieu pour vous aider à grandir:  âme, corps, et esprit.  Ce n’est pas un spectacle, c’est une <strong>Sainte Scène</strong> pour toutes les générations, les familles, les célibataires, les ados et les enfants. Tous sont les bienvenus ! Nous sommes en communion tous les dimanches à 10h.  Fais partie de la <strong>Sainte Scène</strong>.</p>
       </div>
     </div>
     <div class="event">
@@ -30,8 +30,8 @@
       <div class="line"></div>
       <div class="text-group">
         <h2>Bstudy</h2>
-        <span>19h - 21h</span>
-        <p>Le Bstudy, ce sont nos études bibliques qui se tiennent le mercredi soir à 19h dans les cafés, dans les pubs, dans les maisons ou autres.  Ces moments de connexions ne sont pas des enseignements mais plutôt des partages sur des chapitres de la Bible lus par tous et dirigés par un de nos leaders passionnés.<br/> Le Bstudy fait partie de la vie active dans les coulisses de <strong>Sainte Scène</strong> pour renverser la statistique que plus de 90% des chrétiens n’ont jamais lu la Bible de A à Z.  C’est une place d’échanges où nous pouvons être vrais, mettre les cartes sur la table et avoir des réponses à plein de questions simples ou profondes. Veux-tu aller plus loin ? Participe au Bstudy.</p>
+        <span>19h - 20h</span>
+        <p>Nos études bibliques se tiennent le mercredi soir à 19h au Grendel Design.  Ces moments de connexion ne sont pas des enseignements mais plutôt des partages sur des chapitres de la Bible lus par tous et dirigés par un de nos leaders passionnés.  Le Bstudy fait partie de la vie active dans les coulisses de <strong>Sainte Scène</strong> pour renverser la statistique que plus de 90% des chrétiens n’ont jamais lu la Bible de A à Z.  C’est une place d’échanges où nous pouvons être vrais, mettre les cartes sur la table et avoir des réponses à plein de questions simples ou profondes. Veux-tu aller plus loin ? Participe au Bstudy.<br/><a href="https://goo.gl/maps/ATv8oSgHqLD2" target="_blank"><p>Lieu de rencontre: 164 rue Cowie.</p></a></p>
       </div>
     </div>
     <div class="event">
@@ -40,9 +40,9 @@
       </div>
       <div class="line"></div>
       <div class="text-group">
-        <h2>Groupe Connexion</h2>
+        <h2>Cours du Mardi</h2>
         <span>19h - 21h</span>
-        <p>Les Groupes Connexions sont des moments de connexions et de fraternité.  La plupart de nos groupes opèrent le mercredi soir à 19h dans nos locaux, dans des maisons, dans des cafés ou autres.  Tu veux connaître Dieu et ta communauté, fais partie d’un Groupe Connexion!</p>
+        <p>Venez découvrir un enseignement apporté par pst Réjean Cloutier sur l'interprétation des rêves. Dieu nous apprend dans sa Parole qu'il veut se révéler à nous sous une multitude de façon dont le rêve.<br/><a href="https://goo.gl/maps/ATv8oSgHqLD2" target="_blank"><p>Lieu de rencontre: 164 rue Cowie.</p></a></p>
       </div>
     </div>
   </div>
