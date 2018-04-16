@@ -130,4 +130,7 @@ export default {
   height: 30vh; 
   margin: .5vw; 
 }
+.styles__episodeContainerInner___GWTzW {
+  background: white;
+}
 </style>

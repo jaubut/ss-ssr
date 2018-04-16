@@ -5,7 +5,7 @@
     <router-link to="/impliquetoi">Implique-toi</router-link>
     <router-link to="/messages">Messages</router-link>
     <router-link to="/donner">Donner</router-link>
-    <router-link to="/reunionannuelle">Réunion Annuelle</router-link>
+    <router-link to="/contacts">Fiche Contact</router-link>
   </div>
 </template>
 <script>
