@@ -34,17 +34,6 @@
         <p>Nos études bibliques se tiennent le mercredi soir à 19h au Grendel Design.  Ces moments de connexion ne sont pas des enseignements mais plutôt des partages sur des chapitres de la Bible lus par tous et dirigés par un de nos leaders passionnés.  Le Bstudy fait partie de la vie active dans les coulisses de <strong>Sainte Scène</strong> pour renverser la statistique que plus de 90% des chrétiens n’ont jamais lu la Bible de A à Z.  C’est une place d’échanges où nous pouvons être vrais, mettre les cartes sur la table et avoir des réponses à plein de questions simples ou profondes. Veux-tu aller plus loin ? Participe au Bstudy.<br/><a href="https://goo.gl/maps/ATv8oSgHqLD2" target="_blank"><p>Lieu de rencontre: 164 rue Cowie.</p></a></p>
       </div>
     </div>
-    <div class="event">
-      <div class="picture">
-        <p>Mercredi</p>
-      </div>
-      <div class="line"></div>
-      <div class="text-group">
-        <h2>Cours du Mardi</h2>
-        <span>19h - 21h</span>
-        <p>Venez découvrir un enseignement apporté par pst Réjean Cloutier sur l'interprétation des rêves. Dieu nous apprend dans sa Parole qu'il veut se révéler à nous sous une multitude de façon dont le rêve.<br/><a href="https://goo.gl/maps/ATv8oSgHqLD2" target="_blank"><p>Lieu de rencontre: 164 rue Cowie.</p></a></p>
-      </div>
-    </div>
   </div>
 </template>
 <script>
