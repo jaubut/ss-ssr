@@ -1,7 +1,7 @@
 <template>
   <div id="Don">
     <Hero class="hero-don"><h1>Liste de contacts</h1></Hero>
-    <iframe class="airtable-embed" src="https://airtable.com/embed/shrBSU1H7ZvL0Gl8C?backgroundColor=green" frameborder="0" onmousewheel="" width="100%" height="1484" style="background: transparent;"></iframe>
+    <iframe class="airtable-embed" src="https://airtable.com/embed/shrBSU1H7ZvL0Gl8C?backgroundColor=green" frameborder="0" onmousewheel="" width="100%" height="960" style="background: transparent;"></iframe>
   </div>
 </template>
 
