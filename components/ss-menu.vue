@@ -4,8 +4,8 @@
     <router-link to="/evenements">Événements</router-link>
     <router-link to="/impliquetoi">Implique-toi</router-link>
     <router-link to="/messages">Messages</router-link>
-    <router-link to="/donner">Donner</router-link>
     <router-link to="/contacts">Fiche Contact</router-link>
+    <a href="https://paypal.me/saintescene" target="blank"><button class="button-notif">Donnez ici</button></a>
   </div>
 </template>
 <script>
@@ -49,5 +49,8 @@ export default {
 #Menu a:hover {
   transform: translateX(5px);
   transition: transform 0.5s ease-in-out;
+}
+.button-notif {
+  margin-top: 25px;
 }
 </style>
