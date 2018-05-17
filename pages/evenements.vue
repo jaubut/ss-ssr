@@ -10,6 +10,7 @@
         <h2>Dimanche</h2>
         <span>10h - 12h</span>
         <p>Notre communauté Sainte Scène a son rassemblement principal à Granby, le dimanche matin à 10h au 1236 rue St-Charles S.<br/> Vous y trouverez une expérience musicale avec louange, une équipe pastorale et des leaders qui partageront de tout cœur, le cœur de Dieu pour vous aider à grandir:  âme, corps, et esprit.  Ce n’est pas un spectacle, c’est une <strong>Sainte Scène</strong> pour toutes les générations, les familles, les célibataires, les ados et les enfants. Tous sont les bienvenus ! Nous sommes en communion tous les dimanches à 10h.  Fais partie de la <strong>Sainte Scène</strong>.</p>
+        <p>Texte  <span><button class="button-notif">DIMANCHE</button></span> au <a href="sms:1-450-775-8112"><span class="phone-number">450.776.8493</span></a> pour recevoir toutes les notifs en liens avec le Dimanche.</p>
       </div>
     </div>
     <div class="event">
@@ -21,6 +22,7 @@
         <h2>Intercession</h2>
         <span>7h - 9h</span>
         <p>Le groupe d’Intercession est la première lumière allumée dans les coulisses de <strong>Sainte Scène</strong> chaque lundi, mercredi, et vendredi matin de 8h à 9h. Fais partie de l’équipe de prière qui se rencontre pour intercéder les uns pour les autres, pour notre communauté, notre ville, notre région, notre province et notre nation. La prière active tout !<br/><a href="https://www.google.ca/maps/place/1236+Rue+Saint+Charles+S,+Granby,+QC+J2J+0L6/@45.3416945,-72.7487631,17z/data=!3m1!4b1!4m5!3m4!1s0x4cc9c54fe2bf925d:0x1c5a162a6849e0e1!8m2!3d45.3416945!4d-72.7465744" target="_blank"><p>Lieu de rencontre: 1236 rue St-Charles S.</p></a></p>
+        <p>Texte  <span><button class="button-notif">INTERCESSION</button></span> au <a href="sms:1-450-775-8112"><span class="phone-number">450.776.8493</span></a> pour recevoir toutes les notifs en liens avec l'Intercession.</p>      
       </div>
     </div>
     <div class="event">
@@ -32,6 +34,19 @@
         <h2>Bstudy</h2>
         <span>19h - 20h</span>
         <p>Nos études bibliques se tiennent le mercredi soir à 19h au Grendel Design.  Ces moments de connexion ne sont pas des enseignements mais plutôt des partages sur des chapitres de la Bible lus par tous et dirigés par un de nos leaders passionnés.  Le Bstudy fait partie de la vie active dans les coulisses de <strong>Sainte Scène</strong> pour renverser la statistique que plus de 90% des chrétiens n’ont jamais lu la Bible de A à Z.  C’est une place d’échanges où nous pouvons être vrais, mettre les cartes sur la table et avoir des réponses à plein de questions simples ou profondes. Veux-tu aller plus loin ? Participe au Bstudy.<br/><a href="https://goo.gl/maps/ATv8oSgHqLD2" target="_blank"><p>Lieu de rencontre: 164 rue Cowie.</p></a></p>
+        <p>Texte  <span><button class="button-notif">BSTUDY</button></span> au <a href="sms:1-450-775-8112"><span class="phone-number">450.776.8493</span></a> pour recevoir toutes les notifs en liens avec le Bstudy.</p>
+      </div>
+    </div>
+    <div class="event">
+      <div class="picture">
+        <p>Mercredi</p>
+      </div>
+      <div class="line"></div>
+      <div class="text-group">
+        <h2>Cours du Mardi</h2>
+        <span>19h - 21h</span>
+        <p>Venez découvrir un enseignement apporté par pst Réjean Cloutier sur l'interprétation des rêves. Dieu nous apprend dans sa Parole qu'il veut se révéler à nous sous une multitude de façon dont le rêve.<br/><a href="https://goo.gl/maps/ATv8oSgHqLD2" target="_blank"><p>Lieu de rencontre: 164 rue Cowie.</p></a></p>
+        <p>Texte  <span><button class="button-notif">MARDI</button></span> au <a href="sms:1-450-775-8112"><span class="phone-number">450.776.8493</span></a> pour recevoir toutes les notifs en liens avec les Cours du Mardi.</p>
       </div>
     </div>
   </div>
@@ -116,5 +131,7 @@ export default {
 .hero-event {
   background-image: url(~/assets/evenement-bstudy.jpg);
 }
-
+.phone-number {
+  color: #FA7E7E;
+}
 </style>
