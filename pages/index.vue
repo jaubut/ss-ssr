@@ -22,7 +22,7 @@
       </template>
     </div>
     <div class="photo-section">
-      <div v-for="photo in photos.slice(0, 75)" :key="photo.fields.title">
+      <div v-for="photo in photos.slice(0, 20)" :key="photo.fields.title">
         <img v-img:group :src="photo.fields.file.url + '?w=800&h=800'" class="photo">
       </div>
     </div>
