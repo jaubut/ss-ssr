@@ -133,4 +133,13 @@ export default {
 .styles__episodeContainerInner___GWTzW {
   background: white;
 }
+@media(max-width:468px) {
+  .photo {
+    width: 100%; 
+    height: auto; 
+  }
+  .photo-section div {
+    height: auto;
+  }
+}
 </style>

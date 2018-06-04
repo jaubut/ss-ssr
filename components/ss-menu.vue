@@ -5,6 +5,7 @@
     <router-link to="/impliquetoi">Implique-toi</router-link>
     <router-link to="/messages">Messages</router-link>
     <router-link to="/contacts">Fiche Contact</router-link>
+    <router-link to="/equipe">Équipe</router-link>
     <a href="https://paypal.me/saintescene" target="blank"><button class="button-notif">Donnez ici</button></a>
   </div>
 </template>

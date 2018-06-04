@@ -15,13 +15,13 @@
     </div>
     <div class="event">
       <div class="picture">
-        <p>Mardi au vendredi</p>
+        <p v-if="currentDate <= 5"><span class="info" v-if="currentDate === 2 || 1">Mardi</span><span class="info" v-if="currentDate === 5">Vendredi</span><span class="info" v-if="currentDate >= 5">Vendredi</span></p>
       </div>
       <div class="line"></div>
       <div class="text-group">
         <h2>Intercession</h2>
-        <span>7h - 9h</span>
-        <p>Le groupe d’Intercession est la première lumière allumée dans les coulisses de <strong>Sainte Scène</strong> chaque lundi, mercredi, et vendredi matin de 8h à 9h. Fais partie de l’équipe de prière qui se rencontre pour intercéder les uns pour les autres, pour notre communauté, notre ville, notre région, notre province et notre nation. La prière active tout !<br/><a href="https://www.google.ca/maps/place/1236+Rue+Saint+Charles+S,+Granby,+QC+J2J+0L6/@45.3416945,-72.7487631,17z/data=!3m1!4b1!4m5!3m4!1s0x4cc9c54fe2bf925d:0x1c5a162a6849e0e1!8m2!3d45.3416945!4d-72.7465744" target="_blank"><p>Lieu de rencontre: 1236 rue St-Charles S.</p></a></p>
+        <span>7h30 - 9h30</span>
+        <p>Le groupe d’Intercession est la première lumière allumée dans les coulisses de <strong>Sainte Scène</strong> chaque mardi, vendredi et dimanche matin de 7h30 à 9h30. Fais partie de l’équipe de prière qui se rencontre pour intercéder les uns pour les autres, pour notre communauté, notre ville, notre région, notre province et notre nation. La prière active tout !<br/><a href="https://www.google.ca/maps/place/1236+Rue+Saint+Charles+S,+Granby,+QC+J2J+0L6/@45.3416945,-72.7487631,17z/data=!3m1!4b1!4m5!3m4!1s0x4cc9c54fe2bf925d:0x1c5a162a6849e0e1!8m2!3d45.3416945!4d-72.7465744" target="_blank"><p>Lieu de rencontre: 1236 rue St-Charles S.</p></a></p>
         <p>Texte  <span><button class="button-notif">INTERCESSION</button></span> au <a href="sms:1-450-775-8112"><span class="phone-number">450.776.8493</span></a> pour recevoir toutes les notifs en liens avec l'Intercession.</p>      
       </div>
     </div>
@@ -42,6 +42,12 @@
 <script>
 export default {
   name: 'evenement',
+  computed: {
+    currentDate () {
+      let today = new Date()
+      return today.getDay()
+    }
+  },
   head () {
     return {
       title: 'Événements',
