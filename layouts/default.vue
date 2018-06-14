@@ -12,6 +12,13 @@
     <transition name="transite">
       <main @click="show = false" :class="{ active: show}">
         <router-view></router-view>
+        <button @click="toggle =! toggle" class="button-notif round-give">Donnez ici</button>
+        <transition name="fade">
+          <a v-if="toggle" href="https://paypal.me/saintescene" target="blank"><button class="button-notif round-give-2">PayPal</button></a>
+        </transition>
+        <transition name="fade">
+          <a v-if="toggle" href="https://www.canadahelps.org/fr/dn/35836" target="blank"><button class="button-notif round-give-3">Cana don</button></a>
+        </transition>
       </main>
     </transition>
     <ssFooter/>
@@ -36,7 +43,8 @@ export default {
   }, 
   data () {
     return {
-      show: false
+      show: false,
+      toggle: false
     }
   },
   methods: {
@@ -51,5 +59,24 @@ export default {
 </script>
 
 <style>
-  
+  .round-give {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    margin: 25px;
+  }
+  .round-give-2 {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    margin-right: 25px;
+    margin-bottom: 100px;
+  }
+  .round-give-3 {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    margin-right: 25px;
+    margin-bottom: 175px;
+  }
 </style>

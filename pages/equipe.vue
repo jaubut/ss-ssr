@@ -3,7 +3,7 @@
     <h3>L'équipe</h3>
     <div class="main-container">
       <div v-for="item in items" :key="item.fields.name" class="container-team">
-        <div :style="{ 'background-image': 'url(' + item.fields.Photo[0].url + ')' }" class="photo-team"></div>
+        <div v-if="item.fields.Photo[0].url != undefined" :style="{ 'background-image': 'url(' + item.fields.Photo[0].url + ')' }" class="photo-team"></div>
         <p class="name-team">{{ item.fields.Name }}</p>
         <p class="title-team">{{ item.fields.Titre }}</p>
       </div>
