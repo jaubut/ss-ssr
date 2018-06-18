@@ -5,7 +5,6 @@
     <router-link to="/impliquetoi">Implique-toi</router-link>
     <router-link to="/messages">Messages</router-link>
     <router-link to="/contacts">Fiche Contact</router-link>
-    <router-link to="/equipe">Équipe</router-link>
   </div>
 </template>
 <script>
