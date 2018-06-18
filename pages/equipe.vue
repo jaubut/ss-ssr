@@ -3,9 +3,11 @@
     <h3>L'équipe</h3>
     <div class="main-container">
       <div v-for="item in items" :key="item.fields.name" class="container-team">
-        <div v-if="item.fields.Photo[0].url != undefined" :style="{ 'background-image': 'url(' + item.fields.Photo[0].url + ')' }" class="photo-team"></div>
-        <p class="name-team">{{ item.fields.Name }}</p>
-        <p class="title-team">{{ item.fields.Titre }}</p>
+        <template v-if="item.fields.departement = 'benevole'">
+          <div :style="{ 'background-image': 'url(' + item.fields.Photo[0].url + ')' }" class="photo-team"></div>
+          <p class="name-team">{{ item.fields.Name }}</p>
+          <p class="title-team">{{ item.fields.Titre }}</p>
+        </template>
       </div>
     </div>
   </div>
