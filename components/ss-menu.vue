@@ -30,7 +30,7 @@ export default {
   position: absolute;
   z-index: 0;
   background: rgba(255, 255, 255, 0.1);
-  margin: 5% 2% 2% 2%;
+  margin: 15% 2% 2% 2%;
   padding: 2% 2%;
   height: auto;
   width: 92%;
@@ -52,9 +52,9 @@ export default {
 .button-notif {
   margin-top: 25px;
 }
-@media(max-width:468px) {
-  #menu {
-    margin: 15% 2% 2% 2%;
+@media screen and (min-width: 468px) {
+  #Menu {
+    margin: 5% 2% 2% 2%;
   }
 }
 </style>
