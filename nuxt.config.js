@@ -73,5 +73,5 @@ module.exports = {
       }
     }
   },
-  plugins: ['~/plugins/vueclickoutside.js', '~/plugins/contentful.js', '~/plugins/component-hero.js', '~/plugins/v-img.js']
+  plugins: ['~/plugins/vuecarousel.js', '~/plugins/vueclickoutside.js', '~/plugins/contentful.js', '~/plugins/component-hero.js', '~/plugins/v-img.js']
 }

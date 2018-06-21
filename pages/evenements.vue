@@ -1,6 +1,42 @@
 <template>
   <div id="evenement">
-    <Hero class="hero-event"><h1>Événements</h1></Hero>
+    <carousel :per-page="1" :navigate-to="someLocalProperty" mouse-drag="false">
+      <slide>
+        <Hero class="annonce chandail"></Hero>
+        <div class="text">
+          <h1>Chandails disponibles</h1>
+          <p>2 pour 20$ 1 pour 15$</p>
+        </div>
+      </slide>
+      <slide>
+        <Hero class="annonce compassion"></Hero>
+        <div class="text">
+          <h1>Ministère Compassions</h1>
+          <p>Amenez vos denrez non-périssable dans le vestibule.</p>
+        </div>
+      </slide>
+      <slide>
+        <Hero class="hero-event annonce"></Hero>
+        <div class="text">
+          <h1>Bstudy</h1>
+          <p>Tous les mercredis de 7@8.<br>Au Grendel</p>
+        </div>
+      </slide>
+      <slide>
+        <Hero class="annonce campus"></Hero>
+        <div class="text">
+          <h1>Nouveau Campus @Grendel</h1>
+          <p>À partir du 8 juillet. 1 fois par mois.</p>
+        </div>
+      </slide>
+      <slide>
+        <Hero class="annonce dejeuner"></Hero>
+        <div class="text">
+          <h1>Déjeuner pour les femmes</h1>
+          <p>Pour toutes les femmes :) Le 21 juillet @9h00.</p>
+        </div>
+      </slide>
+    </carousel>
     <div class="event">
       <div class="picture">
         <p>Dimanche</p>
@@ -40,8 +76,14 @@
   </div>
 </template>
 <script>
+import { Carousel, Slide } from 'vue-carousel'
+
 export default {
   name: 'evenement',
+  components: {
+    Carousel,
+    Slide
+  },
   computed: {
     currentDate () {
       let today = new Date()
@@ -125,7 +167,45 @@ export default {
 .hero-event {
   background-image: url(~/assets/evenement-bstudy.jpg);
 }
+.compassion {
+  background-image: url(https://images.unsplash.com/photo-1513640127641-49ba81f8305c?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=7aa96678613e152a1fa0df75bf390160&auto=format&fit=crop&w=750&q=80);
+}
+.campus {
+  background-image: url(~/assets/campus.jpg);
+}
+.chandail {
+  background-image: url(~assets/chandail.jpg);
+}
+.dejeuner {
+  background-image: url(https://images.unsplash.com/photo-1493807742375-fbc46d996e8f?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=6f0038573a81b1169576b6674a3ce202&auto=format&fit=crop&w=476&q=80);
+}
 .phone-number {
   color: #FA7E7E;
+}
+.annonce {
+  filter: brightness(50%) !important;
+}
+.text {
+  position: absolute;
+  top: 0;
+  height: 55vh;
+  width: 100%;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 50px;
+}
+.text h1 {
+  font-family: "Germania One", cursive;
+  font-size: 5rem;
+}
+.text p {
+  color: white;
+}
+@media(max-width:468px) {
+  .text h1 {
+    font-size: 3rem;
+  }
 }
 </style>

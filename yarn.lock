@@ -6310,6 +6310,10 @@ vm-browserify@0.0.4:
   dependencies:
     indexof "0.0.1"
 
+vue-carousel@^0.8.1:
+  version "0.8.1"
+  resolved "https://registry.yarnpkg.com/vue-carousel/-/vue-carousel-0.8.1.tgz#1bcd1ab3b11b117498c7bdc5221caf96dcd24ec2"
+
 vue-click-outside@^1.0.7:
   version "1.0.7"
   resolved "https://registry.yarnpkg.com/vue-click-outside/-/vue-click-outside-1.0.7.tgz#cdd2b1605e3c4944784e1794eae4a12a0f700bd6"
