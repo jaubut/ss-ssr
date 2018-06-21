@@ -195,6 +195,7 @@ export default {
   justify-content: center;
   align-items: center;
   margin-bottom: 50px;
+  text-align: center;
 }
 .text h1 {
   font-family: "Germania One", cursive;
