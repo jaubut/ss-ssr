@@ -30,7 +30,7 @@ export default {
   position: absolute;
   z-index: 0;
   background: rgba(255, 255, 255, 0.1);
-  margin: 5% 2% 2% 2%;
+  margin: 15% 2% 2% 2%;
   padding: 2% 2%;
   height: auto;
   width: 92%;
