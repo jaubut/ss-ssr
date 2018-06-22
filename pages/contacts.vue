@@ -1,6 +1,6 @@
 <template>
   <div id="Don">
-    <Hero class="hero-don"><h1>Liste de contacts</h1></Hero>
+    <Hero class="hero-don"> <div class="text"><h1>Liste de contacts</h1></div> </Hero>
     <iframe class="airtable-embed" src="https://airtable.com/embed/shrBSU1H7ZvL0Gl8C?backgroundColor=green" frameborder="0" onmousewheel="" width="100%" height="960" style="background: transparent;"></iframe>
   </div>
 </template>

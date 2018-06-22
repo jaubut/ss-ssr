@@ -1,6 +1,6 @@
 <template>
   <div id="Implique">
-    <Hero class="hero-implique"><h1>Implique-toi</h1></Hero>
+    <Hero class="hero-implique"> <div class="text"><h1>Implique-toi</h1></div> </Hero>
     <div class="bloc span-2">
       <div class="texte">
         <h2>Fais partie des coulisses de Sainte Scène</h2>

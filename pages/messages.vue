@@ -1,7 +1,7 @@
 <template>
   <div id="messages">
     <Hero class="hero-messages">
-      <h1>Messages</h1>
+       <div class="text"><h1>Messages</h1></div> 
     </Hero>
     <BlocMessage v-for="message in messages" :message="message" :key="message.fields.urlYoutube"></BlocMessage>
   </div>

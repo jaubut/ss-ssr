@@ -1,40 +1,45 @@
 <template>
   <div id="evenement">
-    <carousel :per-page="1" :navigate-to="someLocalProperty" mouse-drag="false">
+    <carousel :per-page="1" :navigate-to="0" :autoplay=true :loop=true>
       <slide>
-        <Hero class="annonce chandail"></Hero>
-        <div class="text">
+        <Hero  class="chandail">
+          <div class="text">
           <h1>Chandails disponibles</h1>
           <p>2 pour 20$ 1 pour 15$</p>
         </div>
+        </Hero>
       </slide>
       <slide>
-        <Hero class="annonce compassion"></Hero>
-        <div class="text">
-          <h1>Ministère Compassions</h1>
-          <p>Amenez vos denrez non-périssable dans le vestibule.</p>
-        </div>
+        <Hero  class=" compassion">
+          <div class="text">
+            <h1>Ministère Compassions</h1>
+            <p>Amenez vos denrez non-périssable dans le vestibule.</p>
+          </div>
+        </Hero>
       </slide>
       <slide>
-        <Hero class="hero-event annonce"></Hero>
-        <div class="text">
-          <h1>Bstudy</h1>
-          <p>Tous les mercredis de 7@8.<br>Au Grendel</p>
-        </div>
+        <Hero class="hero-event ">
+          <div class="text">
+            <h1>Bstudy</h1>
+            <p>Tous les mercredis de 7@8.<br>Au Grendel</p>
+          </div>
+        </Hero>
       </slide>
       <slide>
-        <Hero class="annonce campus"></Hero>
-        <div class="text">
-          <h1>Nouveau Campus @Grendel</h1>
-          <p>À partir du 8 juillet. 1 fois par mois.</p>
-        </div>
+        <Hero class=" campus">
+          <div class="text">
+            <h1>Nouveau Campus @Grendel</h1>
+            <p>À partir du 8 juillet. 1 fois par mois.</p>
+          </div>
+        </Hero>
       </slide>
       <slide>
-        <Hero class="annonce dejeuner"></Hero>
-        <div class="text">
-          <h1>Déjeuner pour les femmes</h1>
-          <p>Pour toutes les femmes :) Le 21 juillet @9h00.</p>
-        </div>
+        <Hero class=" dejeuner">
+          <div class="text">
+            <h1>Déjeuner pour les femmes</h1>
+            <p>Pour toutes les femmes :) Le 21 juillet @9h00.</p>
+          </div>
+        </Hero>
       </slide>
     </carousel>
     <div class="event">
@@ -51,7 +56,7 @@
     </div>
     <div class="event">
       <div class="picture">
-        <p v-if="currentDate <= 5"><span class="info" v-if="currentDate === 2 || 1">Mercredi</span><span class="info" v-if="currentDate === 5">Vendredi</span><span class="info" v-if="currentDate >= 5">Vendredi</span></p>
+        <p><span class="info" v-if="currentDate < 4">Mercredi</span><span class="info" v-if="currentDate >= 4">Vendredi</span></p>
       </div>
       <div class="line"></div>
       <div class="text-group">
@@ -181,32 +186,5 @@ export default {
 }
 .phone-number {
   color: #FA7E7E;
-}
-.annonce {
-  filter: brightness(50%) !important;
-}
-.text {
-  position: absolute;
-  top: 0;
-  height: 55vh;
-  width: 100%;
-  display: flex;
-  flex-flow: column wrap;
-  justify-content: center;
-  align-items: center;
-  margin-bottom: 50px;
-  text-align: center;
-}
-.text h1 {
-  font-family: "Germania One", cursive;
-  font-size: 5rem;
-}
-.text p {
-  color: white;
-}
-@media(max-width:468px) {
-  .text h1 {
-    font-size: 3rem;
-  }
 }
 </style>
