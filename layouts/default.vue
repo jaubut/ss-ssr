@@ -21,7 +21,7 @@
         </transition>
       </main>
     </transition>
-    <ssFooter/>
+    <ssFooter v-if="$route.path !== '/jesus'"/>
   </div>
 </template>
 

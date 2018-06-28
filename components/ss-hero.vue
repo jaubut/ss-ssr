@@ -37,6 +37,13 @@ export default {
 .hero .black {
   color: black;
 }
+.full {
+  background: #fafbfc !important;
+}
+.full p {
+  color: black !important;
+  padding: 50px 20%;
+}
 .text {
   grid-area: 1/1/3/3;
   width: 100%;
@@ -58,6 +65,11 @@ export default {
 @media(max-width:468px) {
   .text h1 {
     font-size: 3rem;
+  }
+  .full p {
+    color: black !important;
+    padding: 5% 3%;
+    overflow: scroll;
   }
 }
 </style>
