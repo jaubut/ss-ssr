@@ -23,7 +23,8 @@ export default {
   padding-bottom: 100px;
 }
 .accueil {
-  height: 100vh !important;
+  min-height: 100vh !important;
+  height: 100%;
 }
 .hero h1 {
   font-family: "Germania One", cursive;
@@ -68,8 +69,8 @@ export default {
   }
   .full p {
     color: black !important;
-    padding: 5% 3%;
-    overflow: scroll;
+    padding: 10%;
+    text-align: justify;
   }
 }
 </style>
