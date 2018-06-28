@@ -47,6 +47,9 @@ module.exports = {
       }
     ]
   ],
+  generate: {
+    fallback: true
+  },
   sitemap: {
     path: '/sitemap.xml',
     hostname: 'https://saintescene.com',
