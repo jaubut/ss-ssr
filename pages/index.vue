@@ -1,13 +1,18 @@
 <template>
   <div id="Index">
-    <div class="video">
-      <video autoplay muted>
-        <source src="~/assets/videohd.webm" type="video/webm">
-        <source src="~/assets/videohd.mp4" type="video/mp4">
-        <h1>Sainte Scène</h1>
-      </video>
-    </div>
-    <iframe src="https://anchor.fm/saintescene/embed" height="auto" width="100%" frameborder="0" scrolling="no"></iframe>
+    <Carousel :per-page="1" :navigate-to="0" :autoplay=false :loop=false :paginationEnabled=false>
+      <Slide v-for="photo in photos" :key="photo.fields.title" v-if="photo.fields.title === 'intro'" >
+        <Hero class="accueil" :style="{'background-image': 'url(' + photo.fields.file.url + '?w=800&h=800' + ')'}">
+          <div class="text">
+            <img src="~/assets/logo-white.svg" height="250px" class="logo-hero" alt="">
+            <div @click="scrollMeTo('first-page')" class="arrow">
+              <i class="fas fa-angle-down"></i>
+            </div>
+          </div>
+        </Hero>
+      </Slide>
+    </Carousel>
+    <iframe ref="first-page" src="https://anchor.fm/saintescene/embed" height="auto" width="100%" frameborder="0" scrolling="no"></iframe>
     <BlocMission  title="Notre Mission"
                   text="Sainte Scène est une église non traditionnelle, une communion, une communauté, un corps, trois générations rassemblées pour Jésus. Elle dépasse les barrières des traditions tout en conservant sa fondation; elle est intime et glorieuse; poursuivant l’Esprit de Dieu. Sainte Scène est une scène apostolique, prophétique, et même artistique avec un seul mandat, Jésus."
                   signature="Samuel & Laure Gingras"
@@ -29,6 +34,7 @@
   </div>
 </template>
 <script>
+import { Carousel, Slide } from 'vue-carousel'
 import {createClient} from '@/plugins/contentful'
 import BlocMission from '@/components/ss-bloc-mission'
 import BlocMessage from '@/components/ss-bloc-message'
@@ -39,7 +45,9 @@ export default {
   name: 'Index',
   components: {
     BlocMission,
-    BlocMessage
+    BlocMessage,
+    Carousel,
+    Slide
   },
   asyncData ({ env, params }) {
     return Promise.all([
@@ -56,6 +64,14 @@ export default {
         photos: response.items
       }
     }).catch(console.error)
+  },
+  methods: {
+    scrollMeTo(refName) {
+    var element = this.$refs[refName];
+    var top = element.offsetTop;
+
+    window.scrollTo(0, top);
+  }
   }
 }
 </script>
@@ -64,7 +80,25 @@ export default {
   width: 100%;
   height: 100%;
 }
-
+.arrow {
+  height: 50px;
+  width: 50px;
+  background: #A50E2F;
+  border-radius: 100%;
+  position: absolute;
+  bottom: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+.fa-angle-down {
+  animation-name: bounce;
+  animation-duration: 2.5s;
+  animation-fill-mode: both;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
 .message-section {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -142,4 +176,12 @@ export default {
     height: auto;
   }
 }
+@keyframes bounce { 
+  0%, 20%, 40%, 60%, 80%, 100% {
+    transform: translateY(0);
+    }
+  50% {
+    transform: translateY(-5px);
+    }
+} 
 </style>

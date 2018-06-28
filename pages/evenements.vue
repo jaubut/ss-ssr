@@ -1,8 +1,8 @@
 <template>
   <div id="evenement">
-    <carousel :per-page="1" :navigate-to="0" :autoplay=true :loop=true>
+    <carousel :per-page="1" :navigate-to="0" :autoplay=true :loop=true :paginationEnabled=false>
       <slide>
-        <Hero  class="chandail">
+        <Hero  class="chandail accueil">
           <div class="text">
           <h1>Chandails disponibles</h1>
           <p>2 pour 20$ 1 pour 15$</p>
@@ -10,7 +10,7 @@
         </Hero>
       </slide>
       <slide>
-        <Hero  class=" compassion">
+        <Hero  class=" compassion accueil">
           <div class="text">
             <h1>Ministère Compassions</h1>
             <p>Amenez vos denrez non-périssable dans le vestibule.</p>
@@ -18,7 +18,7 @@
         </Hero>
       </slide>
       <slide>
-        <Hero class="hero-event ">
+        <Hero class="hero-event accueil ">
           <div class="text">
             <h1>Bstudy</h1>
             <p>Tous les mercredis de 7@8.<br>Au Grendel</p>
@@ -26,7 +26,7 @@
         </Hero>
       </slide>
       <slide>
-        <Hero class=" campus">
+        <Hero class=" campus accueil">
           <div class="text">
             <h1>Nouveau Campus @Grendel</h1>
             <p>À partir du 8 juillet. 1 fois par mois.</p>
@@ -34,7 +34,7 @@
         </Hero>
       </slide>
       <slide>
-        <Hero class=" dejeuner">
+        <Hero class=" dejeuner accueil">
           <div class="text">
             <h1>Déjeuner pour les femmes</h1>
             <p>Pour toutes les femmes :) Le 21 juillet @9h00.</p>
@@ -42,41 +42,29 @@
         </Hero>
       </slide>
     </carousel>
-    <div class="event">
-      <div class="picture">
-        <p>Dimanche</p>
-      </div>
-      <div class="line"></div>
-      <div class="text-group">
-        <h2>Dimanche</h2>
-        <span>10h - 12h</span>
-        <p>Notre communauté Sainte Scène a son rassemblement principal à Granby, le dimanche matin à 10h au 1236 rue St-Charles S.<br/> Vous y trouverez une expérience musicale avec louange, une équipe pastorale et des leaders qui partageront de tout cœur, le cœur de Dieu pour vous aider à grandir:  âme, corps, et esprit.  Ce n’est pas un spectacle, c’est une <strong>Sainte Scène</strong> pour toutes les générations, les familles, les célibataires, les ados et les enfants. Tous sont les bienvenus ! Nous sommes en communion tous les dimanches à 10h.  Fais partie de la <strong>Sainte Scène</strong>.</p>
-        <p>Texte  <span><button class="button-notif">DIMANCHE</button></span> au <a href="sms:1-450-775-8112"><span class="phone-number">450.776.8493</span></a> pour recevoir toutes les notifs en liens avec le Dimanche.</p>
-      </div>
-    </div>
-    <div class="event">
-      <div class="picture">
-        <p><span class="info" v-if="currentDate < 4">Mercredi</span><span class="info" v-if="currentDate >= 4">Vendredi</span></p>
-      </div>
-      <div class="line"></div>
-      <div class="text-group">
-        <h2>Intercession</h2>
-        <span>7h30 - 9h30</span>
-        <p>Le groupe d’Intercession est la première lumière allumée dans les coulisses de <strong>Sainte Scène</strong> chaque mercredi, vendredi et dimanche matin de 7h30 à 9h30. Fais partie de l’équipe de prière qui se rencontre pour intercéder les uns pour les autres, pour notre communauté, notre ville, notre région, notre province et notre nation. La prière active tout !<br/><a href="https://www.google.ca/maps/place/1236+Rue+Saint+Charles+S,+Granby,+QC+J2J+0L6/@45.3416945,-72.7487631,17z/data=!3m1!4b1!4m5!3m4!1s0x4cc9c54fe2bf925d:0x1c5a162a6849e0e1!8m2!3d45.3416945!4d-72.7465744" target="_blank"><p>Lieu de rencontre: 1236 rue St-Charles S.</p></a></p>
-        <p>Texte  <span><button class="button-notif">INTERCESSION</button></span> au <a href="sms:1-450-775-8112"><span class="phone-number">450.776.8493</span></a> pour recevoir toutes les notifs en liens avec l'Intercession.</p>      
-      </div>
-    </div>
-    <div class="event">
-      <div class="picture">
-        <p>Mercredi</p>
-      </div>
-      <div class="line"></div>
-      <div class="text-group">
-        <h2>Bstudy</h2>
-        <span>19h - 20h</span>
-        <p>Nos études bibliques se tiennent le mercredi soir à 19h au Grendel Design.  Ces moments de connexion ne sont pas des enseignements mais plutôt des partages sur des chapitres de la Bible lus par tous et dirigés par un de nos leaders passionnés.  Le Bstudy fait partie de la vie active dans les coulisses de <strong>Sainte Scène</strong> pour renverser la statistique que plus de 90% des chrétiens n’ont jamais lu la Bible de A à Z.  C’est une place d’échanges où nous pouvons être vrais, mettre les cartes sur la table et avoir des réponses à plein de questions simples ou profondes. Veux-tu aller plus loin ? Participe au Bstudy.<br/><a href="https://goo.gl/maps/ATv8oSgHqLD2" target="_blank"><p>Lieu de rencontre: 164 rue Cowie.</p></a></p>
-        <p>Texte  <span><button class="button-notif">BSTUDY</button></span> au <a href="sms:1-450-775-8112"><span class="phone-number">450.776.8493</span></a> pour recevoir toutes les notifs en liens avec le Bstudy.</p>
-      </div>
+    <div class="text-group">
+      <h2 @click="dimanche =! dimanche">Dimanche matin</h2>
+      <div class="separator"></div>
+      <transition name="fade">
+        <div class="text-desc" v-if="dimanche">
+          <p>Notre communauté Sainte Scène a son rassemblement principal à Granby, le dimanche matin à 10h au 1236 rue St-Charles S.<br/> Vous y trouverez une expérience musicale avec louange, une équipe pastorale et des leaders qui partageront de tout cœur, le cœur de Dieu pour vous aider à grandir:  âme, corps, et esprit.  Ce n’est pas un spectacle, c’est une <strong>Sainte Scène</strong> pour toutes les générations, les familles, les célibataires, les ados et les enfants. Tous sont les bienvenus ! Nous sommes en communion tous les dimanches à 10h.  Fais partie de la <strong>Sainte Scène</strong>.<br/><a href="https://www.google.ca/maps/place/1236+Rue+Saint+Charles+S,+Granby,+QC+J2J+0L6/@45.3416945,-72.7487631,17z/data=!3m1!4b1!4m5!3m4!1s0x4cc9c54fe2bf925d:0x1c5a162a6849e0e1!8m2!3d45.3416945!4d-72.7465744" target="_blank"><p>Lieu de rencontre: 1236 rue St-Charles S.</p></a></p>
+          <p>Texte  <span><button class="button-notif">DIMANCHE</button></span> au <a href="sms:1-450-775-8112"><span class="phone-number">450.776.8493</span></a> pour recevoir toutes les notifs en liens avec le Dimanche.</p>
+        </div>
+      </transition>
+      <h2 @click="intercession =! intercession">Intercession</h2>
+      <transition name="fade">
+        <div class="text-desc" v-if="intercession">
+          <p>Le groupe d’Intercession est la première lumière allumée dans les coulisses de <strong>Sainte Scène</strong> chaque mercredi, vendredi et dimanche matin de 7h30 à 9h30. Fais partie de l’équipe de prière qui se rencontre pour intercéder les uns pour les autres, pour notre communauté, notre ville, notre région, notre province et notre nation. La prière active tout !<br/><a href="https://www.google.ca/maps/place/1236+Rue+Saint+Charles+S,+Granby,+QC+J2J+0L6/@45.3416945,-72.7487631,17z/data=!3m1!4b1!4m5!3m4!1s0x4cc9c54fe2bf925d:0x1c5a162a6849e0e1!8m2!3d45.3416945!4d-72.7465744" target="_blank"><p>Lieu de rencontre: 1236 rue St-Charles S.</p></a></p>
+          <p>Texte  <span><button class="button-notif">INTERCESSION</button></span> au <a href="sms:1-450-775-8112"><span class="phone-number">450.776.8493</span></a> pour recevoir toutes les notifs en liens avec l'Intercession.</p>
+        </div>
+      </transition>
+      <h2 @click="bstudy =! bstudy">Bstudy</h2>
+      <transition name="fade">
+        <div class="text-desc" v-if="bstudy">
+          <p>Nos études bibliques se tiennent le mercredi soir à 19h au Grendel Design.  Ces moments de connexion ne sont pas des enseignements mais plutôt des partages sur des chapitres de la Bible lus par tous et dirigés par un de nos leaders passionnés.  Le Bstudy fait partie de la vie active dans les coulisses de <strong>Sainte Scène</strong> pour renverser la statistique que plus de 90% des chrétiens n’ont jamais lu la Bible de A à Z.  C’est une place d’échanges où nous pouvons être vrais, mettre les cartes sur la table et avoir des réponses à plein de questions simples ou profondes. Veux-tu aller plus loin ? Participe au Bstudy.<br/><a href="https://goo.gl/maps/ATv8oSgHqLD2" target="_blank"><p>Lieu de rencontre: 164 rue Cowie.</p></a></p>
+          <p>Texte  <span><button class="button-notif">BSTUDY</button></span> au <a href="sms:1-450-775-8112"><span class="phone-number">450.776.8493</span></a> pour recevoir toutes les notifs en liens avec le Bstudy.</p>
+        </div>
+      </transition>
     </div>
   </div>
 </template>
@@ -93,6 +81,13 @@ export default {
     currentDate () {
       let today = new Date()
       return today.getDay()
+    }
+  },
+  data() {
+    return {
+      dimanche: false,
+      intercession: false,
+      bstudy: false
     }
   },
   head () {
@@ -114,12 +109,6 @@ export default {
   width: 100%;
   height: 100%;
 }
-
-.event {
-  display: grid;
-  grid-template: 100%/10% 10% 10% 70%;
-}
-
 .picture {
   grid-area: 1/2/2/4;
   display: flex;
@@ -145,15 +134,28 @@ export default {
   height: 100%;
   margin: 25% 0 10% 0;
 }
-
+.text-desc {
+  padding: 5% 20%;
+  background: #fafbfc;
+}
 .text-group {
-  grid-area: 1/4/2/5;
+  display: flex;
+  flex-flow: column wrap;
+  align-items: left;
+  justify-content: center;
   color: black;
-  padding: 10%;
+  padding: 10% 0%;
 }
 .text-group h2 {
   font-family: "Germania One", cursive;
   font-size: 2rem;
+  margin: 25px;
+  padding: 0 20%;
+  opacity: .5;
+  cursor: pointer;
+}
+.text-group h2:hover {
+  opacity: 1;
 }
 @media(min-width:468px) {
   .text-group h2 {
@@ -168,7 +170,11 @@ export default {
 .text-group p {
   margin-top: 10%;
 }
-
+.separator {
+  height: 1px;
+  background: #fafbfc;
+  width: 70%;
+}
 .hero-event {
   background-image: url(~/assets/evenement-bstudy.jpg);
 }

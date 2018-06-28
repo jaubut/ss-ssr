@@ -18,9 +18,12 @@ export default {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: top center;
-  margin-bottom: 50px;
-  backdrop-filter: brightness(0.5);
-  -webkit-backdrop-filter: brightness(0.5);
+}
+.logo-hero {
+  padding-bottom: 100px;
+}
+.accueil {
+  height: 100vh !important;
 }
 .hero h1 {
   font-family: "Germania One", cursive;
