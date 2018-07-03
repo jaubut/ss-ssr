@@ -2,7 +2,7 @@
   <div id="Index">
     <Carousel :per-page="1" :navigate-to="0" :autoplay=true :loop=true :paginationEnabled=false>
       <Slide v-for="photo in photos" :key="photo.fields.title" v-if="photo.fields.title === 'intro'" >
-        <Hero class="accueil" :style="{'background-image': 'url(' + photo.fields.file.url + '?w=800&h=800' + ')'}">
+        <Hero class="accueil" :style="{'background-image': 'url(' + photo.fields.file.url + ')'}">
           <div class="text">
             <img src="~/assets/logo-white.svg" height="250px" class="logo-hero" alt="">
             <div @click="scrollMeTo('first-page')" class="arrow">

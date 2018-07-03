@@ -17,7 +17,7 @@ export default {
   align-items: center;
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: top center;
+  background-position: center center;
 }
 .logo-hero {
   padding-bottom: 100px;
