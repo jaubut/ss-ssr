@@ -13,7 +13,7 @@
         <Hero  class=" compassion accueil">
           <div class="text">
             <h1>Ministère Compassions</h1>
-            <p>Amenez vos denrez non-périssable dans le vestibule.</p>
+            <p>Amenez vos denrées non périssables dans le vestibule.</p>
           </div>
         </Hero>
       </slide>
