@@ -37,15 +37,6 @@
         <Hero class=" campus accueil">
           <div class="text">
             <h1>Nouveau Campus <br> Sainte Scène Cowie</h1>
-            <p>Prochain rassemblement, 5 août dès 19h.</p>
-          </div>
-        </Hero>
-      </slide>
-      <slide>
-        <Hero class=" dejeuner accueil">
-          <div class="text">
-            <h1>Déjeuner pour les femmes</h1>
-            <p>Pour toutes les femmes :) Le 21 juillet @9h00.</p>
           </div>
         </Hero>
       </slide>
